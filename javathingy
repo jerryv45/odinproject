@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Java Thingy</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+  //javascript goes under here
+  console.log("Hello, World!")
+
+  </script>
+</body>
+</html>

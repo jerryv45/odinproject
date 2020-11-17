@@ -1,0 +1,74 @@
+<!DOCTYPE html>>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>rock paper scissors basically</title>
+</head>
+
+<body>
+
+    <script>
+
+        var makeChoices = function() {
+            userChoice ="";
+            computerChoice = "";
+
+            userChoice = prompt("Do you choose rock paper or scissors?");
+            computerChoice = Math.random();
+            
+            if(computerChoice < 0.34) {
+                computerChoice = "rock";
+            }
+            else if(computerChoice <= 0.67) {
+                computerChoice = "paper";
+            }
+            else {
+                computerChoice = "scissors";
+            }
+
+            console.log("Computer: " + computerChoice + " " + "User: " + userChoice);
+        };
+
+        var compare = function(choice1, choice2) {
+            if(choice 1 === choice2) {
+                makeChoices();
+                compare(userChoice, computerChoice);
+            }
+            else if(choice1 === "rock") {
+                if (choice2 === "scissors") {
+                    return "rock wins";
+                }
+                else {
+                    return "paper wins";
+                }
+            }
+            else if (choice1 ==="paper") {
+                if(choice2 === "rock") {
+                    return "paper wins";
+                }
+                else {
+                    return "scissors wins";
+                }
+            }
+            else if (choice1 === "scissors") {
+                if (choice2 === "rock") {
+                    return "rock wins";
+                }
+                else {
+                    return "scissors wins";
+                }
+            }
+            else {
+                return "invalid choice by user";
+            }
+        };
+
+        makeChoices();
+        compare (userChoice,computerChoice);
+
+    </script>
+
+
+</body>
+
+</html>
