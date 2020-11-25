@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<div class="container">
+    <div class="title">Unity to be real must stand the severest strain without breaking.</div>
+    <div class="subtitle">Mahatma Gandhi</div>
+</div>
+
+<head>
+    <style>
+    @mixin center(){
+        -webkit-transform:
+        translate(-50%, -50%);
+        -ms-transform:
+        translate(-50%,-50%);
+        transform:
+        translate(-50%,-50%);
+        left:50%;
+        top:50%;
+
+    }
+
+    @import
+    url(https://fonts.googleapis.com.css?family=Raleway:400,,800,90);
+    html {
+        width: 100%;
+        height: 100%;
+
+    }
+
+    body {
+        background: -webkit-
+    linear-gradient(rgb(235,236,231), rgb(255,255,255));
+    background: linear-gradient(rgb(235, 236, 231), rgb(255,255,255));
+    margin:0;
+    width:100%;
+    height:10%;
+    font-family: 'Raleway', sans-serif;
+    }
+
+    .container {
+        position:absolute;
+        @include center();
+    }
+
+    .title {
+        font-weight: 800;
+        color: transparent;
+        font-size: 120px;
+        background: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/91dc1964120315.5ac77335ae374.png") repeat;
+        background-position: 40% 50%;
+        -webkit-background-clip: text;
+        position: relative;
+        text-align: center;
+        line-height: 90px;
+        letter-spacing: -8px;
+    }
+    .subtitle {
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        padding-top:10px;
+    }
+</style>
+
+    </head>
+
+    <script>
+        $(document).ready(function () {
+            var mouseX, mouseY;
+            var ww = $(window).width();
+            var wh = $(window).height();
+            var traX, traY;
+            $(document).mousemove(function (e) {
+                mouseX = e.pageX;
+                mouseY = e.pageY;
+                traX = (4 * mouseX) / 570 + 40;
+                traY = (4 * mouseY) / 570 + 50;
+                console.log(traX);
+                $("title").css({"background-position": traX + "%" + traY + "%"});
+            });
+        });
+
+    </script>
+
+</body>
+
+
+
+</html>
